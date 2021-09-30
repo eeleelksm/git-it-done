@@ -1,6 +1,6 @@
 var repoNameEl = document.querySelector("#repo-name");
 var issueContainerEl = document.querySelector("#issues-container");
-var limitWarningEl = document.querySelector("limit-warning");
+var limitWarningEl = document.querySelector("#limit-warning");
 
 var getRepoName = function(){
   // grab repo name from url query string
@@ -19,7 +19,6 @@ var getRepoName = function(){
 };
 
 var getReposIssues = function(repo) {
-  console.log(repo);
   var apiUrl = "https://api.github.com/repos/" + repo + "/issues?direction=asc";
 
   fetch(apiUrl).then(function(response) {
